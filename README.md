@@ -42,7 +42,52 @@ This repository contains 2 main directories and 2 more for the web and imagenes 
 - scripts: all the pySpark scripts used for recover the data analisis.
 
 ## How to use this tool:
-Code lines and explanation.
+These will be the recipe for test our code, described as command lines without use gCloud UI.
+
+> Get the VM prepare
+
+- First, to create the VM instance type this sentence in the gCloud shell:
+```
+gcloud compute instances create spark-local --project=platinum-snow-327612 --zone=europe-west6-a --machine-type=n1-highcpu-4
+```
+Then you will get this result message:
+![created](https://user-images.githubusercontent.com/48984072/145902197-764f7d6b-0f8d-43eb-9033-091120c47a3c.jpg)
+
+So, now it's time to begin the use of our VM instance, for that type in gCloud shell
+```
+gcloud beta compute ssh --zone "europe-west6-a" "spark-local"  --project "platinum-snow-327612"
+```
+
+- Then, install java...
+```
+sudo apt install default-jre
+```
+...then test the version with:
+```
+java -version
+```
+
+- And, install spark, with the following lines...
+```
+curl -O https://ftp.cixug.es/apache/spark/spark-3.1.2/spark-3.1.2-bin-hadoop3.2.tgz
+tar xvf spark-3.1.2-bin-hadoop3.2.tgz
+sudo mv spark-3.1.2-bin-hadoop3.2 /usr/local/spark
+```
+...need to run is to add spark path to the user profile, like these...
+```
+PATH="$PATH:/usr/local/spark/bin"
+source ~/.profile
+```
+...and test Spark:
+```
+spark-submit /usr/local/spark/examples/src/main/python/pi.py 10
+```
+
+Clear all with `clear`
+
+> Here starts the project software
+
+
 
 ## Bottom line:
 There a lot of questions that may not have a clear solution.
