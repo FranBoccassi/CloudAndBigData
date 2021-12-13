@@ -2,7 +2,7 @@
 
 ___
 ### StackOverflow Questions & Answers Analysis
-###### website: [visitar web][WEB]
+###### website: [show the web][WEB]
 [WEB]: https://franboccassi.github.io/CloudAndBigData/#
 [Portada]: images/prosus-compra-stack-overflow.jpg
 
