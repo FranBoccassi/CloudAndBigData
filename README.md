@@ -86,6 +86,7 @@ spark-submit /usr/local/spark/examples/src/main/python/pi.py 10
 Clear all with `clear`
 
 ## How to use this tool:
+These will be the recipe for test our code, described as command lines inside the VM SSH.
 
 > Here starts the project software
 
