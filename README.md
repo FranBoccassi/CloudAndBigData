@@ -1,7 +1,12 @@
 # CloudAndBigData
 
 ___
+### StackOverflow Questions & Answers Analysis
+###### website: [visitar web][WEB]
+[WEB]: https://franboccassi.github.io/CloudAndBigData/#
+[Portada]: images/prosus-compra-stack-overflow.jpg
 
+![stackOverflow][Portada]
 ___
 
 ## Introduction
