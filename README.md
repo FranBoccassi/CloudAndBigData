@@ -1,6 +1,7 @@
 # CloudAndBigData
 
 ___
+
 ___
 
 ## Introduction
@@ -26,10 +27,37 @@ Which helps us in the first place, for example, to clarify the evidence of the n
 Here we leave the link for the datasets that we have used, they are too wide to upload to GitHub:
 https://www.kaggle.com/stackoverflow/stacksample
 
+## Dataset:
+With a total of 3.6Gb, this dataset with the text of 10% of questions and answers from the Stack Overflow programming Q&A website, provides three organized tables:
 
-### Our Team
-Adrian Garrido Blazquez -- Software Engineering
-Francisco Boccassi -- Software Engineering
-Jorge Lasheras Martín -- Software Engineering
-Manuel Pérez Belizón -- Informatics Engineering
-Pablo Cubells -- Video games development
+- Questions: contains the title, body, creation date, closed date (if applicable), score, and owner ID for all non-deleted Stack Overflow questions whose Id is a multiple of 10.
+- Answers: contains the body, creation date, score, and owner ID for each of the answers to these questions. The ParentId column links back to the Questions table.
+- Tags: contains the tags on each of these questions.
+
+## Repository contents:
+This repository contains 2 main directories and 2 more for the web and imagenes obtained:
+- assets: all the necessary files to run the web.
+- images: all the images obtained for visual representation.
+- reducedDatasets: all the .csv files saved obtained by the results of the scripts on dataset's.
+- scripts: all the pySpark scripts used for recover the data analisis.
+
+## How to use this tool:
+Code lines and explanation.
+
+## Bottom line:
+There a lot of questions that may not have a clear solution.
+Possible improvements:
+- Make an interactive-integrated tool to have a clear visibility of actuality.
+- Make more interesting solutions like clasification about users with highest score.
+
+## Tools used:
+- Google Cloud - used for VM instance with linux SO and pySpark.
+- Spark - to map and reduce the data.
+- Excel - to make representative diagrams of the result.
+
+## Team formation:
+- adgarr01@ucm.es Adrian Garrido Blazquez -- Software Engineering
+- franbocc@ucm.es Francisco Boccassi -- Software Engineering
+- jorgelas@ucm.es Jorge Lasheras Martín -- Software Engineering
+- manupacr@ucm.es Manuel Pérez Belizón -- Informatics Engineering
+- pablocub@ucm.es Pablo Cubells -- Video Game Development
