@@ -3,28 +3,33 @@
 ___
 ___
 
-## Introducción
+## Introduction
 
-StackOverflow Questions & Answers es un proyecto que trata de analizar la eficiencia del servidor más popular entre los programadores, el cual tiene muy buena fama.
+StackOverflow Questions & Answers is a project that tries to analyze the efficiency of the most popular server among programmers, which has a very good reputation.
 
-Este analisis trata de demostrar hasta qué punto es verídico que es uno de los servidores con mejor rendimiento a escala mundial.
+This analysis tries to demonstrate to what extent it is true that it is one of the best performing servers in the world.
 
-### Descripción del problema
+### Description of the problem
 
-A menudo nos encontramos con dudas sobre cómo realizar cierto código en programación, tendemos a pensar que para qué vamos a "reinventar la rueda" pues muchas de las cosas que necesitamos hacer cuando desarrollamos un proyecto de programación, se basa en reutilizar partes de código con diferentes funciones, estas suelen ser el sujeto de nuestras dudas, cómo lo habrán hecho los que ya lo han hecho, cómo será la forma más eficiente... A todo esto en la mayoría de las ocasiones encontramos respaldo en StackOverflow.
+We often find ourselves with doubts about how to make certain code in programming, we tend to think that why are we going to "reinvent the wheel" since many of the things we need to do when we develop a programming project, is based on reusing parts of code with different functions, these are usually the subject of our doubts, how those who have already done it will have done it, how it will be the most efficient way ... To all this in most cases we find support in StackOverflow.
 
-### Necesidad del Big Data
+### Need for Big Data
 
-Alcanzar a ver todas y cada una de las preguntas junto con sus respectivas respuestas, alcanza un tamaño excesivamente grande, debido a que reune una comunidad a escala mundial. Además, sirve de respaldo para todo tipo de lenguajes de programación. Por este motivo, hemos realizado scripts que facilitan la recopilación de datos y además generan diferentes contrastes de la información, para ello utilizamos una instancia de máquina virtual de Google Cloud con 4vCPU y 3.6Gb de memoria.
+Being able to see each and every one of the questions along with their respective answers, reaches an excessively large size, due to the fact that it brings together a community on a world scale. In addition, it serves as a backup for all types of programming languages. For this reason, we have made scripts that facilitate data collection and also generate different contrasts of information, for this we use a Google Cloud virtual machine instance with 4vCPU and 3.6Gb of memory.
 
-### Solución
+### Solution
 
-La solución desarrollada hemos obtenido los dataset's más actualizados, sobre estos realizamos los siguientes procesos: filtrar, analizar, guardar y representar la información obtenida; según los diferentes aspectos que hemos tenido en cuenta como son: el tiempo medio de respuesta, los tags más frecuentes, es decir, lenguajes más usados y aquellos tags que no han obtenido una solución concreta.
+For the developed solution we have obtained the most up-to-date dataset's, on these we carry out the following processes: filter, analyze, save and represent the information obtained; according to the different aspects that we have taken into account, such as: the average response time, the most frequent tags, that is, the most used languages ​​and those tags that have not obtained a specific solution.
 
-Lo que nos ayuda en primer lugar por ejemplo a clarificar la evidencia de la cantidad de preguntas sin solucionar.
+Which helps us in the first place, for example, to clarify the evidence of the number of unsolved questions.
 
-Aquí dejamos el enlace para los datasets que hemos utilizado, son demasiado amplios como para subirlos a GitHub:
-
+Here we leave the link for the datasets that we have used, they are too wide to upload to GitHub:
 https://www.kaggle.com/stackoverflow/stacksample
 
 
+### Our Team
+Adrian Garrido Blazquez -- Software Engineering
+Francisco Boccassi -- Software Engineering
+Jorge Lasheras Martín -- Software Engineering
+Manuel Pérez Belizón -- Informatics Engineering
+Pablo Cubells -- Video games development
