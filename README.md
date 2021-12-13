@@ -41,8 +41,8 @@ This repository contains 2 main directories and 2 more for the web and imagenes 
 - reducedDatasets: all the .csv files saved obtained by the results of the scripts on dataset's.
 - scripts: all the pySpark scripts used for recover the data analisis.
 
-## How to use this tool:
-These will be the recipe for test our code, described as command lines without use gCloud UI.
+## How to prepare the VM:
+These will be the recipe for prepare a linux/ubuntu OS-VM instance with Spark integrated, described as command lines without use gCloud UI.
 
 > Get the VM prepare
 
@@ -84,6 +84,8 @@ spark-submit /usr/local/spark/examples/src/main/python/pi.py 10
 ```
 
 Clear all with `clear`
+
+## How to use this tool:
 
 > Here starts the project software
 
