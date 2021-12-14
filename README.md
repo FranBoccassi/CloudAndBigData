@@ -113,13 +113,15 @@ cp guava-30.1-jre.jar /home/$USER/.local/lib/python3.7/site-packages/pyspark/jar
 BUCKET=gs://<user>/stackOverFlow
 BUCKET=gs:<BUCKET>
 ```
+And, submit there .csv files downloaded from the Kaggle website.
 
 **3.** To execute the **timeOfAnswer.py** script that uses the three *DataSets* that compose this project:
 ```
 spark-submit --packages com.google.cloud.bigdataoss:gcs-connector:hadoop3-2.2.0 timeOfAnswer.py $BUCKET/Questions.csv $BUCKET/Answers.csv $BUCKET/Tags.csv
 ```
 
-In general terms, you can use this line changing the **.py** file and the **datasets** included:
+## How to use this tool: In general terms
+> You can use this line script changing the **.py** file and the **datasets** included:
 ```
 spark-submit --packages com.google.cloud.bigdataoss:gcs-connector:hadoop3-2.2.0 <script.py> $BUCKET/<dataset01>.csv $BUCKET/<dataset02>.csv ...
 ```
