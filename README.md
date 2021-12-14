@@ -105,9 +105,27 @@ In this project we have developed 4 scripts whose we encontered very interesting
 ```
 gcloud dataproc clusters create stackoverflow-cluster --enable-component-gateway --region europe-west6 --zone europe-west6-b --master-machine-type n1-standard-4 --master-boot-disk-size 50 --num-workers 2 --worker-machine-type n1-standard-4 --worker-boot-disk-size 50 --image-version 2.0-debian10
 ```
-**2.** Once created, we access their virtual instances and get into the **master node**
+**2.** Once created, we access their virtual instances and get into the **master node stackoverflow-cluster-m** 
 ![cluster 2w 4c](https://user-images.githubusercontent.com/48984072/145990960-d1eaf269-f481-4aad-9904-dccc80f2553a.png)
 
+**3.** We test it with the two following scripts, accessing from cloud storage and check if it runs well: 
+
+> Checking timeOfAnswer.py
+```
+BUCKET=gs://<user>/ClusterCheck/stackOverFlow
+BUCKET=gs:<BUCKET>
+spark-submit $BUCKET/timeOfAnswer.py $BUCKET/Questions.csv $BUCKET/Answers.csv $BUCKET/Tags.csv
+```
+With 2 worker and 4 cores this takes: real 23.381secs. / user 32.883secs. / sys 1.54secs.
+And, with 4 workers and 4 cores this takes: real 24.162secs. / user 34.667secs. /  sys 1.541secs.
+
+> Checking script3.py
+```
+BUCKET=gs:<BUCKET>
+spark-submit $BUCKET/script3.py $BUCKET/Answers.csv
+```
+With 2 worker and 4 cores this takes: real 20.022secs. / user 26.022secs. / sys 1.433secs.
+And, with 4 workers and 4 cores this takes: real 19.108secs. / user 25.541secs. /  sys 1.357secs.
 
 
 ## Bottom line:
