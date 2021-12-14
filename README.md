@@ -113,7 +113,7 @@ cp guava-30.1-jre.jar /home/$USER/.local/lib/python3.7/site-packages/pyspark/jar
 BUCKET=gs://<user>/stackOverFlow
 BUCKET=gs:<BUCKET>
 ```
-And, submit there .csv files downloaded from the Kaggle website.
+And, submit there **.csv files** downloaded from the Kaggle website.
 
 **3.** To execute the **timeOfAnswer.py** script that uses the three *DataSets* that compose this project:
 ```
