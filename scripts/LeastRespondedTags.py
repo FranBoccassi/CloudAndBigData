@@ -1,5 +1,6 @@
 from pyspark.sql import SparkSession, functions as F
 import sys
+import csv
 spark = SparkSession.builder.appName('Script1').getOrCreate()
 
 path = "/home/mdpbelizon/Tags.csv"
