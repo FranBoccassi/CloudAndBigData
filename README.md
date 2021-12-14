@@ -96,6 +96,7 @@ These will be the recipe for test our code, described as command lines inside th
 
 > Here starts the project software
 - Make sure you have set correctly the PATH.
+
 **1.** With pySpark running in SHH of the spark VM, for download the connector:
 ```
 wget https://repo1.maven.org/maven2/com/google/guava/guava/30.1-jre/guava-30.1-jre.jar
