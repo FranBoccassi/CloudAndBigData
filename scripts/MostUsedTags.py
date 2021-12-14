@@ -12,7 +12,7 @@ conf = SparkConf().setMaster('local').setAppName('tags_mas_usados.py')
 sc = SparkContext(conf = conf)
 spark = SparkSession(sc)
 
-rdd=sc.textFile("Tags.csv")
+rdd=sc.textFile(sys.argv[1])
 rdd.first() #quitamos la cabecera
 
 tags=rdd.map(lambda x: x.lower().split(',')[1])
