@@ -116,16 +116,16 @@ BUCKET=gs://<user>/ClusterCheck/stackOverFlow
 BUCKET=gs:<BUCKET>
 spark-submit $BUCKET/timeOfAnswer.py $BUCKET/Questions.csv $BUCKET/Answers.csv $BUCKET/Tags.csv
 ```
-With 2 worker and 4 cores this takes: real 23.381secs. / user 32.883secs. / sys 1.54secs.
-And, with 4 workers and 4 cores this takes: real 24.162secs. / user 34.667secs. /  sys 1.541secs.
+- With 2 worker and 4 cores this takes: real 23.381secs. / user 32.883secs. / sys 1.54secs.
+- And, with 4 workers and 4 cores this takes: real 24.162secs. / user 34.667secs. /  sys 1.541secs.
 
 > Checking script3.py
 ```
 BUCKET=gs:<BUCKET>
 spark-submit $BUCKET/script3.py $BUCKET/Answers.csv
 ```
-With 2 worker and 4 cores this takes: real 20.022secs. / user 26.022secs. / sys 1.433secs.
-And, with 4 workers and 4 cores this takes: real 19.108secs. / user 25.541secs. /  sys 1.357secs.
+- With 2 worker and 4 cores this takes: real 20.022secs. / user 26.022secs. / sys 1.433secs.
+- And, with 4 workers and 4 cores this takes: real 19.108secs. / user 25.541secs. /  sys 1.357secs.
 
 
 ## Bottom line:
