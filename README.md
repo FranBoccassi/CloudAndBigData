@@ -121,8 +121,7 @@ In general terms, you can use this line changing the **.py** file and the **data
 ```
 spark-submit --packages com.google.cloud.bigdataoss:gcs-connector:hadoop3-2.2.0 <script.py> $BUCKET/<dataset01>.csv $BUCKET/<dataset02>.csv ...
 ```
-
-In this project we have developed 4 scripts whose we encontered very interesting to show main statistics about this tool.
+##### In this project we have developed 4 scripts whose we encontered very interesting to show main statistics about this tool.
 
 > Running scripts in different Clusters check
 
