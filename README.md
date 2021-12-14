@@ -91,7 +91,9 @@ spark-submit /usr/local/spark/examples/src/main/python/pi.py 10
 
 Clear all with `clear` and type `exit`.
 
-## How to use this tool:
+##### In this project we have developed 4 scripts whose we encontered very interesting to show main statistics about this tool.
+
+## How to use this tool: timeOfAnswer.py
 These will be the recipe for test our code, described as command lines inside the VM SSH.
 
 > Here starts the project software
@@ -121,9 +123,8 @@ In general terms, you can use this line changing the **.py** file and the **data
 ```
 spark-submit --packages com.google.cloud.bigdataoss:gcs-connector:hadoop3-2.2.0 <script.py> $BUCKET/<dataset01>.csv $BUCKET/<dataset02>.csv ...
 ```
-##### In this project we have developed 4 scripts whose we encontered very interesting to show main statistics about this tool.
 
-> Running scripts in different Clusters check
+## Running scripts in different Clusters check
 
 **1.** From gCloud shell, create **cluster** with 2 workers and 4 cores
 ```
@@ -150,6 +151,10 @@ spark-submit $BUCKET/script3.py $BUCKET/Answers.csv
 - With 2 worker and 4 cores this takes: real 20.022secs. / user 26.022secs. / sys 1.433secs.
 - And, with 4 workers and 4 cores this takes: real 19.108secs. / user 25.541secs. /  sys 1.357secs.
 
+![Bytes de disco](https://user-images.githubusercontent.com/48984072/145996957-896a1f12-556e-4d87-bea6-f5d0a3115a8a.png)
+![Operaciones de disco](https://user-images.githubusercontent.com/48984072/145996959-4025b847-12f6-41c6-b7e0-757d1d3fcf8b.png)
+![Paquetes de red](https://user-images.githubusercontent.com/48984072/145996961-e080ad6a-ecaa-40d8-adc5-4c73fc7462fd.png)
+![Uso de CPU](https://user-images.githubusercontent.com/48984072/145996964-9ca697c5-8fba-419f-a2e9-31fbe385552f.png)
 
 ## Bottom line:
 There a lot of questions that may not have a clear solution.
