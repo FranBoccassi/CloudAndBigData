@@ -96,6 +96,30 @@ These will be the recipe for test our code, described as command lines inside th
 
 > Here starts the project software
 - Make sure you have set correctly the PATH.
+**1.** With pySpark running in SHH of the spark VM, for download the connector:
+```
+wget https://repo1.maven.org/maven2/com/google/guava/guava/30.1-jre/guava-30.1-jre.jar
+
+mv /usr/local/spark/jars/guava-14.0.1.jar /usr/local/spark/jars/guava-14.0.1.jar.bk
+
+cp guava-30.1-jre.jar /home/$USER/.local/lib/python3.7/site-packages/pyspark/jars
+```
+
+**2.** For created the **bucket** for test and save files in our cloud storage:
+```
+BUCKET=gs://<user>/stackOverFlow
+BUCKET=gs:<BUCKET>
+```
+
+**3.** To execute the **timeOfAnswer.py** script that uses the three *DataSets* that compose this project:
+```
+spark-submit --packages com.google.cloud.bigdataoss:gcs-connector:hadoop3-2.2.0 timeOfAnswer.py $BUCKET/Questions.csv $BUCKET/Answers.csv $BUCKET/Tags.csv
+```
+
+In general terms, you can use this line changing the **.py** file and the **datasets** included:
+```
+spark-submit --packages com.google.cloud.bigdataoss:gcs-connector:hadoop3-2.2.0 <script.py> $BUCKET/<dataset01>.csv $BUCKET/<dataset02>.csv ...
+```
 
 In this project we have developed 4 scripts whose we encontered very interesting to show main statistics about this tool.
 
@@ -112,7 +136,6 @@ gcloud dataproc clusters create stackoverflow-cluster --enable-component-gateway
 
 > Checking timeOfAnswer.py
 ```
-BUCKET=gs://<user>/ClusterCheck/stackOverFlow
 BUCKET=gs:<BUCKET>
 spark-submit $BUCKET/timeOfAnswer.py $BUCKET/Questions.csv $BUCKET/Answers.csv $BUCKET/Tags.csv
 ```
